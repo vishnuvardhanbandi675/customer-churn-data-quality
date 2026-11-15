@@ -1,0 +1,14 @@
+column,type,description,origin
+CustomerID,text,"Unique customer identifier, format CUST-####",Raw
+Gender,category,Female / Male,Raw
+Age,integer,Customer age in years (observed 23-60),Raw
+TenureMonths,integer,Months the customer has been subscribed,Raw
+SubscriptionType,category,"Plan tier: Basic ($49.99), Pro ($79.99), Enterprise ($149.99) per month",Raw
+MonthlyCharges,float,Monthly price billed (currency not stated in source),Raw
+TotalCharges,float,Lifetime billed amount; equals TenureMonths x MonthlyCharges in every row,Raw
+ContractType,category,Month-to-Month / One Year / Two Year,Raw
+SupportTickets,integer,Number of support tickets raised (observed 0-6),Raw
+PaymentMethod,category,Credit Card / Debit Card / Bank Transfer / UPI,Raw
+Churn,category,Whether the customer left: Yes / No,Raw
+ChurnFlag,integer 0/1,1 if Churn = Yes else 0,Derived
+TenureBand,category,"TenureMonths grouped: 0-6, 7-12, 13-24, 25+",Derived
